@@ -19,4 +19,13 @@
 """
 
 # TODO: прочитайте матрицу и выведите её столбцы как строки
+n = int(input())
+m = int(input())
+list_numbers = []
+for row in range(n):
+    list_numbers.append(list(map(int, input().split())))
+for j in range(m):
+    for i in range(n):
+        print(list_numbers[i][j], end=' ')
+    print()
 

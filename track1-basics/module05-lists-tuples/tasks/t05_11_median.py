@@ -18,5 +18,10 @@
 2.5
 """
 
-# TODO: отсортируйте список и найдите медиану
+# TODO: отсортируйте список и найдите медиан
+import statistics
+n = list(map(int, input().split()))
+median = statistics.median(n)
+print(median)
+
 

@@ -19,4 +19,10 @@ three три
 """
 
 # TODO: постройте обратный словарь и выведите по sorted-ключам
-
+n = int(input())
+translation = {}
+for _ in range(n):
+    eng, rus = input().split()
+    translation[rus] = eng
+for key in sorted(translation):
+    print(f"{key}: {translation[key]}")

@@ -15,4 +15,9 @@
 """
 
 # TODO: пересечение двух множеств, сортировка, вывод
+a = set(map(int, input().split()))
+b = set(map(int, input().split()))
 
+common = sorted(a & b)
+if common:
+    print(*common)

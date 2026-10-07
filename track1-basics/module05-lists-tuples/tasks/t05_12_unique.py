@@ -14,4 +14,6 @@
 """
 
 # TODO: соберите список без повторов и выведите его
-
+n = map(int, input().split())
+result = list(dict.fromkeys(n))
+print(*result)

@@ -14,4 +14,15 @@
 """
 
 # TODO: частоты букв словарём, вывод по отсортированным ключам
+n = input().lower()
+word = {}
+for letter in n:
+    if letter == " ":
+        continue
+    if letter in word:
+        word[letter] += 1
+    else:
+        word[letter] = 1
+for letter in sorted(word):
+    print(f"{letter}: {word[letter]}")
 

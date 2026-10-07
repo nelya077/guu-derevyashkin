@@ -18,4 +18,9 @@
 """
 
 # TODO: прочитайте матрицу в список строк и просуммируйте каждую
-
+n = int(input())
+m = int(input())
+for i in range(n):
+    a = list(map(int, input().split()))
+    sum_a = sum(a)
+    print(sum_a)

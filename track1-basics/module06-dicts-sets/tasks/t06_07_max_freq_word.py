@@ -13,4 +13,11 @@ a
 """
 
 # TODO: посчитайте частоты и найдите слово-максимум
-
+words = input().split()
+word = {}
+for w in words:
+    if w in word:
+        word[w] += 1
+    else:
+        word[w] = 1
+print(max(word, key = word.get))

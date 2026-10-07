@@ -15,4 +15,13 @@
 """
 
 # TODO: словарь «длина → список слов», вывод по возрастанию длин
+words = input().split()
+dictionary = {}
+for word in words:
+    if len(word) in dictionary:
+        dictionary[len(word)].append(word)
+    else:
+        dictionary[len(word)] = [word]
 
+for length in sorted(dictionary):
+    print(f"{length}:", *dictionary[length])

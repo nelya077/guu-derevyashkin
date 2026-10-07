@@ -17,4 +17,14 @@
 """
 
 # TODO: соберите словарь из n строк и выполните поиск
+n = int(input())
+book = {}
+for _ in range(n):
+    name, number = input().split()
+    book[name] = number
 
+query = input()
+if query in book:
+    print(book[query])
+else:
+    print("не найдено")

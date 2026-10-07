@@ -17,3 +17,12 @@
 
 # TODO: посчитайте частоты слов словарём и выведите их
 
+text = input().split()
+counts = {}
+for w in text:
+    if w in counts:
+        counts[w] += 1
+    else:
+        counts[w] = 0
+for k, v in counts.items():
+    print(k, v)

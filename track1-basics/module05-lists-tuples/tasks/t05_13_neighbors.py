@@ -13,4 +13,10 @@ True
 """
 
 # TODO: переберите соседние пары (a[i] и a[i+1]) и сравните
-
+a = list(map(int, input().split()))
+found = False
+for i in range(len(a)-1):
+    if a[i] == a[i + 1]:
+        found = True
+        break
+print(found)

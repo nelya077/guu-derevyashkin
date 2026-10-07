@@ -18,4 +18,11 @@
 """
 
 # TODO: соберите результат из двух срезов: последние k и всё остальное
+numbers = list(map(int, input().split()))
+k = int(input())
+list_new = numbers[-k:]
+list_k = numbers[:-k]
+result = list_new + list_k
+print(*result)
+
 

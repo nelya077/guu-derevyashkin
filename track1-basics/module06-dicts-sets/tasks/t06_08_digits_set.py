@@ -14,4 +14,10 @@ a1b23c1
 """
 
 # TODO: соберите множество цифр и выведите его по возрастанию
-
+text = input()
+n = set()
+for i in text:
+    if i.isdigit():
+        n.add(i)
+if n:
+    print(*sorted(n))

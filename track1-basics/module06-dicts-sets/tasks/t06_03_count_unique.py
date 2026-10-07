@@ -12,4 +12,5 @@
 """
 
 # TODO: переведите числа в множество и посчитайте элементы
-
+numbers = set(map(str, input().split()))
+print(len(numbers))
