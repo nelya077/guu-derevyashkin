@@ -13,4 +13,14 @@
 """
 
 # TODO: сначала посчитайте частоты, затем найдите первое слово с частотой 1
+word = input().split()
+words = {}
+for w in word:
+    words[w] = words.get(w, 0) + 1
+for n in word:
+    if words[n] == 1:
+        print(n)
+        break
+else:
+    print("-")
 

@@ -15,4 +15,7 @@
 """
 
 # TODO: множества букв двух строк, пересечение, сортировка
-
+a = input()
+b = input()
+c = set(a) & set(b)
+print(sorted("".join(c)))

@@ -19,4 +19,11 @@
 """
 
 # TODO: словарь «имя → список оценок», затем средние
+n = int(input())
+name_subject = {}
+for _ in range(n):
+    name = input().split()
+    name_subject.setdefault(name[0], []).append(int(name[2]))
 
+for student, marks in name_subject.items():
+    print(student, round(sum(marks) / len(marks), 2))

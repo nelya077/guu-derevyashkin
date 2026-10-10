@@ -27,6 +27,17 @@
 n = int(input())
 warehouse = {}
 for _ in range(n):
+    name, qty= input().split()
+    qty = int(qty)
+    warehouse[name] = qty
+m = int(input())
+for s in range(m):
+    name, qty = input().split()
+    qty = int(qty)
+    warehouse[name] += qty
+for key, value in warehouse.items():
+    print(f"{key}: {value}")
+
 
 
 

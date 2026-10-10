@@ -16,4 +16,13 @@
 """
 
 # TODO: найдите пару индексов с нужной суммой
+nums = list(map(int, input().split()))
+target = int(input())
 
+seen = {}
+for a, b in enumerate(nums):
+    need = target - b
+    if need in seen:
+        print(seen[need], a)
+        break
+    seen[b] = a
