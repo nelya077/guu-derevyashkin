@@ -15,4 +15,6 @@ armstrong(10)   → False
 
 def armstrong(n):
     # TODO: сумма цифр в степени длины числа
-    pass
+    digits = str(n)
+    power = len(digits)
+    return sum(int(c) ** power for c in digits) == n

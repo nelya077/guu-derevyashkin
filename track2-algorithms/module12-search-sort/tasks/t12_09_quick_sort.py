@@ -14,4 +14,10 @@ quick_sort([5, 2, 9, 1]) → [1, 2, 5, 9]
 
 def quick_sort(items):
     # TODO: опорный элемент + три списка + рекурсия
-    pass
+    if len(items) <= 1:
+        return items[:]
+    pivot = items[0]
+    smaller = [v for v in items if v < pivot]
+    equal = [v for v in items if v == pivot]
+    bigger = [v for v in items if v > pivot]
+    return quick_sort(smaller) + equal + quick_sort(bigger)

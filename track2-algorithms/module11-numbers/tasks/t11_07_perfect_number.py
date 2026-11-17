@@ -14,4 +14,6 @@ perfect_number(12) → False
 
 def perfect_number(n):
     # TODO: сумма делителей из задачи 11-06 без самого числа
-    pass
+    if n < 2:
+        return False
+    return sum(d for d in range(1, n) if n % d == 0) == n

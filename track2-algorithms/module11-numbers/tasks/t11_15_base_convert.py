@@ -15,4 +15,9 @@ base_convert(7, 7)    → "10"
 
 def base_convert(n, base):
     # TODO: как в 11-14, но цифры из "0123456789ABCDEF"
-    pass
+    alphabet = "0123456789ABCDEF"
+    digits = []
+    while n > 0:
+        digits.append(alphabet[n % base])
+        n //= base
+    return "".join(reversed(digits))

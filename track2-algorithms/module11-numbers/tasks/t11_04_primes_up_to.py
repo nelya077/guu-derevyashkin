@@ -14,4 +14,14 @@ primes_up_to(2)  → [2]
 
 def primes_up_to(n):
     # TODO: перебор или решето
-    pass
+    if n < 2:
+        return []
+    sieve = [True] * (n + 1)
+    sieve[0] = sieve[1] = False
+    d = 2
+    while d * d <= n:
+        if sieve[d]:
+            for m in range(d * d, n + 1, d):
+                sieve[m] = False
+        d += 1
+    return [i for i in range(2, n + 1) if sieve[i]]

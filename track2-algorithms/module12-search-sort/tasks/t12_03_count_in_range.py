@@ -12,4 +12,4 @@ count_in_range([1, 5, 3, 8, 2], 2, 5) → 3   (5, 3, 2)
 
 def count_in_range(items, lo, hi):
     # TODO: включение с двумя условиями
-    pass
+    return sum(1 for v in items if lo <= v <= hi)

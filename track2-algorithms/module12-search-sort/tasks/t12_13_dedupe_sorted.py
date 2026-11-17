@@ -14,4 +14,8 @@ dedupe_sorted([1, 1, 2, 3, 3, 3]) → [1, 2, 3]
 
 def dedupe_sorted(items):
     # TODO: один проход; элемент добавляется, если не равен предыдущему
-    pass
+    result = []
+    for v in items:
+        if not result or v != result[-1]:
+            result.append(v)
+    return result

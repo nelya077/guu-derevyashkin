@@ -14,4 +14,20 @@ merge_sort([5, 2, 9, 1]) → [1, 2, 5, 9]
 
 def merge_sort(items):
     # TODO: база случая; деление пополам; рекурсия; слияние
-    pass
+    if len(items) <= 1:
+        return items[:]
+    mid = len(items) // 2
+    left = merge_sort(items[:mid])
+    right = merge_sort(items[mid:])
+    i = j = 0
+    merged = []
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            merged.append(left[i])
+            i += 1
+        else:
+            merged.append(right[j])
+            j += 1
+    merged.extend(left[i:])
+    merged.extend(right[j:])
+    return merged

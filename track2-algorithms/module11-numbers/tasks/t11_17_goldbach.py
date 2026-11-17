@@ -15,4 +15,17 @@ goldbach(26) → (3, 23)
 
 def goldbach(n):
     # TODO: перебор p от 2 вверх, проверка простоты p и n - p
-    pass
+    def is_prime(k):
+        if k < 2:
+            return False
+        d = 2
+        while d * d <= k:
+            if k % d == 0:
+                return False
+            d += 1
+        return True
+
+    for p in range(2, n // 2 + 1):
+        if is_prime(p) and is_prime(n - p):
+            return (p, n - p)
+    return None

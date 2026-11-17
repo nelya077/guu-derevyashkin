@@ -13,4 +13,14 @@ count_primes(10, 20)  → 4   (11, 13, 17, 19)
 
 def count_primes(a, b):
     # TODO: перебор чисел отрезка с проверкой простоты
-    pass
+    def is_prime(n):
+        if n < 2:
+            return False
+        d = 2
+        while d * d <= n:
+            if n % d == 0:
+                return False
+            d += 1
+        return True
+
+    return sum(1 for x in range(a, b + 1) if is_prime(x))

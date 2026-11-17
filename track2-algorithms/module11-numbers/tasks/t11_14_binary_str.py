@@ -14,4 +14,8 @@ binary_str(1)  → "1"
 
 def binary_str(n):
     # TODO: забирайте остатки n % 2, уменьшая n //= 2, потом разверните
-    pass
+    digits = []
+    while n > 0:
+        digits.append(str(n % 2))
+        n //= 2
+    return "".join(reversed(digits))
